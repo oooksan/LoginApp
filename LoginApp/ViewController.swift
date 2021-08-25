@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         case forgotUserNameButton:
             showAlert(with: "Oops!", and: "Your name is Oksana 🥳")
         default:
-            showAlert(with: "Oops", and: "Your password is Password 🤯")
+            showAlert(with: "Oops", and: "Your password is password 🤯")
         }
     }
     
