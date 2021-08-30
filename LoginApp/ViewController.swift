@@ -12,19 +12,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    @IBOutlet weak var forgotUserNameButton: UIButton!
-    @IBOutlet weak var forgotPasswordButton: UIButton!
     
-    let userName = "Oksana"
-    let password = "password"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    private let userName = "Oksana"
+    private let password = "password"
+
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let helloVC = segue.destination as? HelloViewController else {return}
-        helloVC.welcomeValue = loginTF.text ?? ""
+        helloVC.welcomeValue = userName
     }
     
     @IBAction func checkLoginAndPassword() {
@@ -42,25 +37,20 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "showMe", sender: self)
         } else {
             showAlert(with: "Oops", and: "Wrong login or password")
+            passwordTF.text = ""
         }
         
     }
     
     @IBAction func restoreUserNameOrPassword(_ sender: UIButton) {
-        switch sender {
-        case forgotUserNameButton:
-            showAlert(with: "Oops!", and: "Your name is Oksana 🥳")
-        default:
-            showAlert(with: "Oops", and: "Your password is password 🤯")
-        }
+        sender.tag == 0
+            ? showAlert(with: "Oops!", and: "Your name is \(userName) 🥳")
+            : showAlert(with: "Oops", and: "Your password is \(password) 🤯")
     }
     
     @IBAction func unwind (for segue: UIStoryboardSegue) {
-        guard let helloVC = segue.source as? HelloViewController else {return}
-        if helloVC.logoutButton.isTouchInside {
-            loginTF.text = ""
-            passwordTF.text = ""
-        }
+        loginTF.text = ""
+        passwordTF.text = ""
     }
      
     private func showAlert(with title: String, and text: String){
