@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2268CB1E26DED45500FBD579 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268CB1D26DED45500FBD579 /* User.swift */; };
 		22FDDD7226D6D69800FDE5DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FDDD7126D6D69800FDE5DA /* AppDelegate.swift */; };
 		22FDDD7426D6D69800FDE5DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FDDD7326D6D69800FDE5DA /* SceneDelegate.swift */; };
 		22FDDD7626D6D69800FDE5DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FDDD7526D6D69800FDE5DA /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2268CB1D26DED45500FBD579 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22FDDD6E26D6D69800FDE5DA /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FDDD7126D6D69800FDE5DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22FDDD7326D6D69800FDE5DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,10 +41,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22FDDD6526D6D69800FDE5DA = {
+		2268CB1826DED3D100FBD579 /* Stroryboards */ = {
+			isa = PBXGroup;
+			children = (
+				22FDDD7726D6D69800FDE5DA /* Main.storyboard */,
+				22FDDD7C26D6D69A00FDE5DA /* LaunchScreen.storyboard */,
+			);
+			path = Stroryboards;
+			sourceTree = "<group>";
+		};
+		2268CB1926DED40400FBD579 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				22FDDD8526D6F84500FDE5DA /* HelloViewController.swift */,
+				22FDDD7526D6D69800FDE5DA /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2268CB1A26DED42100FBD579 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				22FDDD7126D6D69800FDE5DA /* AppDelegate.swift */,
+				22FDDD7326D6D69800FDE5DA /* SceneDelegate.swift */,
+				22FDDD7F26D6D69A00FDE5DA /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2268CB1B26DED42600FBD579 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				22FDDD7A26D6D69A00FDE5DA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2268CB1C26DED43F00FBD579 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2268CB1D26DED45500FBD579 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		22FDDD6526D6D69800FDE5DA = {
+			isa = PBXGroup;
+			children = (
 				22FDDD7026D6D69800FDE5DA /* LoginApp */,
 				22FDDD6F26D6D69800FDE5DA /* Products */,
 			);
@@ -59,13 +104,11 @@
 		22FDDD7026D6D69800FDE5DA /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				22FDDD7126D6D69800FDE5DA /* AppDelegate.swift */,
-				22FDDD7326D6D69800FDE5DA /* SceneDelegate.swift */,
-				22FDDD7526D6D69800FDE5DA /* ViewController.swift */,
-				22FDDD7726D6D69800FDE5DA /* Main.storyboard */,
-				22FDDD7A26D6D69A00FDE5DA /* Assets.xcassets */,
-				22FDDD7C26D6D69A00FDE5DA /* LaunchScreen.storyboard */,
-				22FDDD7F26D6D69A00FDE5DA /* Info.plist */,
+				2268CB1C26DED43F00FBD579 /* Models */,
+				2268CB1926DED40400FBD579 /* ViewControllers */,
+				2268CB1826DED3D100FBD579 /* Stroryboards */,
+				2268CB1A26DED42100FBD579 /* App */,
+				2268CB1B26DED42600FBD579 /* Resources */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -143,6 +186,7 @@
 				22FDDD7626D6D69800FDE5DA /* ViewController.swift in Sources */,
 				22FDDD7226D6D69800FDE5DA /* AppDelegate.swift in Sources */,
 				22FDDD7426D6D69800FDE5DA /* SceneDelegate.swift in Sources */,
+				2268CB1E26DED45500FBD579 /* User.swift in Sources */,
 				22FDDD8626D6F84500FDE5DA /* HelloViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,8 +18,5 @@ class HelloViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(welcomeValue)!"
      }
-    
-    @IBAction func logoutButtonPressed() {
-        dismiss(animated: true)
-    }
+
 }
